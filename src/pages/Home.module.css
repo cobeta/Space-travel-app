@@ -1,0 +1,15 @@
+.home {
+    margin: 100px auto;
+    max-width: 700px;
+}
+
+.homeTitle {
+    font-size: 2.5rem;
+    text-align: left;
+}
+.homeDescription {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 20px;
+    color: #ccc;
+}
