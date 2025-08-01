@@ -1,10 +1,11 @@
-// src/pages/Spacecrafts.test.jsx
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { vi } from 'vitest'
+import { usePlanets } from '../hooks/usePlanets'
+import { useSpacecrafts } from '../hooks/useSpacecrafts'
+import Spacecrafts from './Spacecrafts'
 
-/** 1️⃣ Mock your hooks with vi.mock **/
 vi.mock('../hooks/usePlanets', () => ({
   usePlanets: vi.fn(),
 }))
@@ -12,7 +13,6 @@ vi.mock('../hooks/useSpacecrafts', () => ({
   useSpacecrafts: vi.fn(),
 }))
 
-/** 2️⃣ Mock Spinner and SpacecraftCard as default exports **/
 vi.mock('../components/Spinner', () => ({
   default: () => <div data-testid="spinner" />,
 }))
@@ -23,10 +23,6 @@ vi.mock('./SpacecraftCard', () => ({
     </div>
   ),
 }))
-
-import { usePlanets } from '../hooks/usePlanets'
-import { useSpacecrafts } from '../hooks/useSpacecrafts'
-import Spacecrafts from './Spacecrafts'
 
 describe('Spacecrafts component', () => {
   beforeEach(() => {
