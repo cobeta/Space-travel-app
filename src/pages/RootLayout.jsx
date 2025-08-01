@@ -1,13 +1,11 @@
 import { NavLink, Outlet } from 'react-router-dom';
 
+import Navbar from '../components/Navbar';
+
 const RootLayout = () => {
     return (
         <div className='rootLayout'>
-            <nav>
-                <NavLink to="/" end>Home</NavLink>
-                <NavLink to="/spacecrafts">Spacecrafts</NavLink>
-                <NavLink to="/planets">Planets</NavLink>
-            </nav>
+            <Navbar/>
             <main>
                 <Outlet />
             </main>

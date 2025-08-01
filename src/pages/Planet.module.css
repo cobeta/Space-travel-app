@@ -1,0 +1,70 @@
+.planet {
+  display: flex;
+  align-items: flex-start; 
+  padding: 12px;
+  border: 3px solid white;
+  border-radius: 12px;
+  background-color: black;
+  margin: 20px;
+}
+
+.planetLeft {
+  width: 200px;
+  flex-shrink: 0;  
+  text-align: center;    
+}
+
+.planetLeft img {
+  height: 180px;
+  display: block;
+}
+
+.planetSubtitle {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: #979797;
+}
+
+.planetRight {
+  flex: 1;  
+  padding-left: 1rem;       
+}
+
+.ship {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shipImage {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.shipFallback {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* highlight the selected planet */
+.selectedPlanet {
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+/* highlight the selected ship */
+.selectedShip {
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}

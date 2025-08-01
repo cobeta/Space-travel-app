@@ -1,0 +1,29 @@
+.newSpacecraft {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #121521;
+    color: #eeeef3;
+    border: 2px solid #ffffffa8;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    margin: 2.5rem;
+    cursor: pointer;
+}
+.newSpacecraft:hover,
+.newSpacecraft:focus {
+    background-color: #121629;
+    color: #fffffe;
+}
+
+.spacecraftList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: #121629;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(20, 20, 40, 0.4);
+}

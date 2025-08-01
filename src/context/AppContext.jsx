@@ -1,16 +1,23 @@
-import { createContext, useState } from 'react';
+// src/context/AppContext.jsx
+import { createContext, useState, useContext } from 'react';
 
-export const AppContext = createContext();
+const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
+  const [planets, setPlanets]         = useState([]);
   const [spacecrafts, setSpacecrafts] = useState([]);
-  const [planets, setPlanets] = useState([]);
 
   return (
-    <AppContext.Provider value={{ spacecrafts, setSpacecrafts, planets, setPlanets }}>
+    <AppContext.Provider value={{
+      planets, setPlanets,
+      spacecrafts, setSpacecrafts
+    }}>
       {children}
     </AppContext.Provider>
   );
 };
 
-export default AppProvider;
+export const useAppData = () => {
+  const ctx = useContext(AppContext);
+  return ctx;
+};
